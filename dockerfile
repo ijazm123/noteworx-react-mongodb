@@ -1,6 +1,7 @@
 FROM ubuntu/nginx:1.18-20.04_edge
 WORKDIR /app
 COPY . .
+RUN apt update
 RUN apt install -y nodejs
 RUN apt install npm -y
 RUN apt install -y mongodb
