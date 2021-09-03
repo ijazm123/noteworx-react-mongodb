@@ -1,10 +1,6 @@
-FROM ubuntu/nginx:1.18-20.04_edge
+FROM node:8.5.0-alpine
 WORKDIR /app
 COPY . .
-RUN apt update
-RUN apt install -y nodejs
-RUN apt install npm -y
-RUN apt install -y mongodb
 RUN npm install
 RUN npm run build
 EXPOSE 8000
