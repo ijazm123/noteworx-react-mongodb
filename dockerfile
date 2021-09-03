@@ -3,6 +3,7 @@ WORKDIR /app
 COPY . .
 RUN apt install -y nodejs
 RUN apt install npm -y
+RUN apt install -y mongodb
 RUN npm install
 RUN npm run build
 EXPOSE 8000
